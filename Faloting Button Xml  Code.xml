@@ -1,9 +1,0 @@
- <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_action1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:fab_colorNormal="@color/white"
-            app:fab_colorPressed="@color/white_pressed"
-            app:fab_icon="@drawable/shayaripin"
-            app:fab_size="mini"
-            app:fab_title="ADD SHAYARI" />
