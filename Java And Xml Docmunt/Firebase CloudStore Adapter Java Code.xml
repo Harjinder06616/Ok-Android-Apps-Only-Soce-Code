@@ -1,0 +1,82 @@
+extends RecyclerView.Adapter<myadapter.ViewHolder> {
+
+    public List<Model> getmodel;
+    Context context;
+
+    public myadapter(List<Model> model, Context context) {
+        this.getmodel = model;
+        this.context = context;
+
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+
+        View view;
+        TextView username;
+        TextView shayaritext;
+        ImageButton likebtn, copybtn, sharebtn;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            view = itemView;
+            username = view.findViewById(R.id.UserNameShow);
+            shayaritext = view.findViewById(R.id.shayaritext);
+            likebtn = view.findViewById(R.id.like);
+            copybtn = view.findViewById(R.id.copy);
+            sharebtn = view.findViewById(R.id.share);
+
+
+        }
+    }
+
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_reshowshayari, parent, false);
+
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+        holder.username.setText(getmodel.get(position).getUsername());
+        holder.shayaritext.setText(getmodel.get(position).getAddshayari());
+
+
+
+        holder.likebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,  "Like", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        holder.copybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("label",getmodel.get(position).getAddshayari());
+                clipboard.setPrimaryClip(clip);
+                Toast.makeText(context,  "Copy", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        holder.sharebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent txtIntent = new Intent(Intent.ACTION_SEND);
+                txtIntent .setType("text/plain");
+                txtIntent .putExtra(Intent.EXTRA_SUBJECT,"shayari");
+                txtIntent .putExtra(Intent.EXTRA_TEXT,getmodel.get(position).getAddshayari());
+                context.startActivity(Intent.createChooser(txtIntent,"Share"));
+                Toast.makeText(context,  "Share", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+
+    }
+    @Override
+    public int getItemCount() {
+        return getmodel.size();
+    }
