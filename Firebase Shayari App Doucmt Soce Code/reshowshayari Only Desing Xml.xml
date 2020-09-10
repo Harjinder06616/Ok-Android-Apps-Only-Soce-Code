@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="8dp"
+    tools:context=".reshowshayari">
+
+    <RelativeLayout
+        android:id="@+id/laout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/big_edittext">
+
+        <TextView
+            android:id="@+id/UserNameShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:drawableStart="@drawable/ic_person_24"
+            android:drawablePadding="3dp"
+            android:gravity="start"
+            android:text="@string/username"
+            android:textColor="#B80E69"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/shayaritext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="start"
+            android:text="@string/shayari"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <Button
+            android:paddingEnd="20dp"
+            android:id="@+id/copy"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_below="@+id/shayaritext"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/copy"
+            android:drawableEnd="@drawable/ic_copy24"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:paddingEnd="20dp"
+            android:id="@+id/share"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:layout_below="@+id/shayaritext"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/share"
+            android:drawableEnd="@drawable/ic_share_24"
+            android:layout_toEndOf="@+id/copy"
+            tools:ignore="RtlSymmetry" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

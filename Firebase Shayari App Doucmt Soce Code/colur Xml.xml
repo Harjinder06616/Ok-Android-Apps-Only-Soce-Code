@@ -1,0 +1,19 @@
+//colur
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B80E69</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#000000</color>
+    <color name="white">#098C13</color>
+    <color name="white_pressed">#FFFDFD</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#B805677F</color>
+    <color name="black_semi_transparent_pressed">#80738f</color>
+    <color name="iconcolour">#CACACA</color>
+</resources>

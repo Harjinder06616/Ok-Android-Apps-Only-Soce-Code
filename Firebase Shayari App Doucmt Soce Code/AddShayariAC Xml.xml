@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddShayariAC">
+
+
+    <EditText
+        android:id="@+id/UserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/big_edittext"
+        android:gravity="start"
+        android:hint="@string/enter_your_name"
+        android:inputType="textMultiLine|textCapSentences"
+        android:padding="10dp"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/ShayariAddBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/big_edittext"
+        android:gravity="start"
+        android:hint="@string/add_shayari"
+        android:inputType="textMultiLine|textCapSentences"
+        android:minHeight="250dp"
+        android:padding="10dp"
+        android:autofillHints="no" />
+
+    <Button
+        android:id="@+id/Uploadbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:text="@string/upload"
+        android:textColor="@color/white_pressed" />
+</LinearLayout>
